@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>SD.CPP WebUI</title>
+
+    <link
+        rel="stylesheet"
+        href="/style.css"
+    >
+</head>
+
+<body>
+
+<div class="app">
+
+    <header class="header">
+        <div>
+            <h1>SD.CPP WebUI</h1>
+            <span>stable-diffusion.cpp</span>
+        </div>
+
+        <div id="status" class="status">
+            Ready
+        </div>
+    </header>
+
+
+    <main class="main">
+
+        <section class="panel controls">
+
+            <label for="prompt">
+                Prompt
+            </label>
+
+            <textarea
+                id="prompt"
+                placeholder="Describe the image..."
+            >a beautiful cyberpunk city at night, cinematic photography</textarea>
+
+
+            <div class="settings">
+
+                <div class="field">
+                    <label for="width">
+                        Width
+                    </label>
+
+                    <input
+                        id="width"
+                        type="number"
+                        value="512"
+                        min="64"
+                        max="4096"
+                    >
+                </div>
+
+
+                <div class="field">
+                    <label for="height">
+                        Height
+                    </label>
+
+                    <input
+                        id="height"
+                        type="number"
+                        value="512"
+                        min="64"
+                        max="4096"
+                    >
+                </div>
+
+
+                <div class="field">
+                    <label for="steps">
+                        Steps
+                    </label>
+
+                    <input
+                        id="steps"
+                        type="number"
+                        value="9"
+                        min="1"
+                        max="100"
+                    >
+                </div>
+
+
+                <div class="field">
+                    <label for="seed">
+                        Seed
+                    </label>
+
+                    <input
+                        id="seed"
+                        type="number"
+                        value="-1"
+                        min="-1"
+                    >
+                </div>
+
+            </div>
+
+
+            <button
+                id="generate"
+                class="generate-button"
+            >
+                Generate
+            </button>
+
+        </section>
+
+
+        <section class="panel result">
+
+            <div class="result-header">
+                <h2>Result</h2>
+            </div>
+
+            <div
+                id="image-container"
+                class="image-container"
+            >
+                <div class="placeholder">
+                    Generated image will appear here
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="/app.js"></script>
+
+</body>
+</html>
